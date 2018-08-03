@@ -11,15 +11,16 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'clearance', '~> 1.15.1'
 
-gem 'nokogiri', '1.6.8.1'
+gem 'nokogiri', '~> 1.8.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'minitest-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do

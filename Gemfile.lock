@@ -39,13 +39,27 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    bcrypt (3.1.12)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.2)
+    clearance (1.15.1)
+      bcrypt
+      email_validator (~> 1.4)
+      rails (>= 3.1)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_bot (4.10.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.10.0)
+      factory_bot (~> 4.10.0)
+      railties (>= 3.0.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -65,11 +79,14 @@ GEM
       mini_mime (>= 0.1.1)
     method_source (0.9.0)
     mini_mime (1.0.0)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
+    minitest-rails (3.0.0)
+      minitest (~> 5.8)
+      railties (~> 5.0)
     nio4r (2.3.1)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
     pg (1.0.0)
     puma (3.12.0)
     rack (2.0.5)
@@ -141,9 +158,13 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  clearance (~> 1.15.1)
+  factory_bot_rails
+  faker
   jquery-rails
   listen (~> 3.0.5)
-  nokogiri (= 1.6.8.1)
+  minitest-rails
+  nokogiri (~> 1.8.1)
   pg (>= 0.18, < 2.0)
   puma (~> 3.0)
   rails (~> 5.0.7)
